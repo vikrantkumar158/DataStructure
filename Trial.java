@@ -3,14 +3,14 @@ import vikrant.ds.Queue;
 import vikrant.ds.*;
 public class Trial
 {
-	public static void main(String args[])
-	{
-		HashTable h=new HashTable();
-		h.insert("Hello");
-		h.insert("Hi");
-		h.insert("are");
-		h.insert("you");
-		System.out.println(h.get("Hi"));
+	// public static void main(String args[])
+	// {
+		// HashTable h=new HashTable();
+		// h.insert("Hello");
+		// h.insert("Hi");
+		// h.insert("are");
+		// h.insert("you");
+		// System.out.println(h.get("Hi"));
 		// SinglyLinkedList sll=new SinglyLinkedList();
 		
 		// System.out.println(sll.size());
@@ -63,7 +63,7 @@ public class Trial
 		// System.out.println(l.toString());
 		// System.out.println(l.pop());
 		// System.out.println(l.toString());
-	}
+	// }
 	/** Demonstrates sample usage of a stack. */
     // public static void main(String[] args) {
     // Stack S = new LinkedStack();  // contents: ()
@@ -137,8 +137,8 @@ public class Trial
 	// 	System.out.println(sll.last());
 	// 	System.out.println(sll.toString());
 	// }
-	// public static void main(String args[])
-	// {
+	public static void main(String args[])
+	{
 		// int i,arr[]=new int[]{10,9,8,7,6,5,4,3,2,1};
 		// Sorting.HeapSort(arr);
 		// for(i=0;i<arr.length;++i)
@@ -161,8 +161,11 @@ public class Trial
 		// System.out.println(q.peek());
 		// System.out.println(q.dequeue());
 		// System.out.println(q.dequeue());
-	// 	int arr[]=new int[]{1,1,2,2,2,3,4,6,6,6,7};
-	// 	System.out.println(BinarySearch.IterativeSearch(arr,6));
-	// 	System.out.println(BinarySearch.RecursiveSearch(arr,6,0,arr.length-1));
-	// }
+		int arr[]=new int[]{1,2,3,5,6};
+		// System.out.println(BinarySearch.IterativeSearch(arr,6));
+		// System.out.println(BinarySearch.RecursiveSearch(arr,6,0,arr.length-1));
+		// System.out.println(BinarySearch.occurence(arr,6));
+		// System.out.println(BinarySearch.pairsWithSum(arr,10));
+		System.out.println(BinarySearch.findMissing(arr));
+	}
 }
