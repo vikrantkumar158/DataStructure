@@ -4,9 +4,6 @@ Linked List
 > Remove Loop 
 > Merging Point of Linked Lists ( slow and fast, hashing)
 
-Hash Table	
-> Implement Hash Table with collision handling
-
 Priority Queues and Heaps	
 > Find median in a stream
 > Operations on Binary Min heap
