@@ -1,0 +1,65 @@
+Linked List  	 
+> Add first & last , second & second last ...... in O(n) - ( Recursive and Non recursive)
+> Detect Loop
+> Remove Loop 
+> Merging Point of Linked Lists ( slow and fast, hashing)
+
+Hash Table	
+> Implement Hash Table with collision handling
+
+Priority Queues and Heaps	
+> Find median in a stream
+> Operations on Binary Min heap
+> Kth largest element in a stream
+> Merge K sorted linked list
+
+Greedy Algorithms
+> Knapsack
+> Interval Scheduling
+
+String Algorithms	
+> KMP 
+> Z Algorithm
+
+Binary Search
+> Find all pairs with sum K 
+> Find first occurence of an integer in a sorted list with duplicates
+> Rotation count of a sorted array 
+> Search element in a rotated sorted array
+> Find missing element
+
+Trees
+> Creating a  BST 
+> Traversals (Inorder, Preorder and Postorder).
+> Iterative Traversals (Inorder, Preorder and Postorder).
+> Calculate Height of a Tree 
+> Path in the Tree ( Highest cost , Print the paths)
+> Level Order Traversal
+> Level Order Traversal in Spiral Form 
+> Reverse Level Order Traversal
+> Mirror of a Tree
+> Vertical Order Traversal 
+> Top View of a Tree 
+> Bottom View of a Tree
+> Check is tree is valid BST or no
+> Binary Tree to Doubly Linked List
+> Delete a Node in BST 
+> Palindromic tree 
+> Lowest Common Ancestor
+> Diameter of a Binary Tree 
+> Delete a Tree 
+> Construct a Tree from Inorder and Preorder, 
+> Construct a Tree from InOrder and PostOrder
+> Implement Tree using Array
+
+Suffix Arrays
+> Longest Repeated String - Overlapping
+> Longest Repeated String - Non - Overlapping
+> Longest Repeated String which occurs n times 
+> All Anagrams in Dictionary  
+> Longest Common Prefix
+
+Balanced Trees
+> AVL ( Implementation Optional )
+> Red-Black trees ( Will be discussed in tomorrow's class)
+> Tries (Will be discussed in tomorrow's class)
