@@ -19,21 +19,21 @@ public class BracketValidation
 					a.push(s.charAt(i));
 				else if(s.charAt(i)==')')
 				{
-					if((char)a.top()=='(')
+					if(!a.isEmpty()&&(char)a.top()=='(')
 						a.pop();
 					else
 						flag=1;
 				}
 				else if(s.charAt(i)=='}')
 				{
-					if((char)a.top()=='{')
+					if(!a.isEmpty()&&(char)a.top()=='{')
 						a.pop();
 					else
 						flag=1;	
 				}
 				else if(s.charAt(i)==']')
 				{
-					if((char)a.top()=='[')
+					if(!a.isEmpty()&&(char)a.top()=='[')
 						a.pop();
 					else
 						flag=1;				

@@ -153,18 +153,13 @@ public class SinglyLinkedList<E>
     {
         if(!isEmpty())
         {
-            int mid=size/2,i=1;
-            if(size%2==1)
-                ++mid;
-            Node<E> n=head;
-            while(true)
+            Node<E> slow=head,fast=head;
+            while(slow!=null&&fast!=null&&fast.getNext()!=null)
             {
-                if(i==mid)
-                    break;
-                n=n.getNext();
-                ++i;
+                slow=slow.getNext();
+                fast=fast.getNext().getNext();
             }
-            return n.getElement();
+            return slow.getElement();
         }
         return null;
     }

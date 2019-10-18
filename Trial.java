@@ -11,7 +11,7 @@ public class Trial
 		// h.insert("are");
 		// h.insert("you");
 		// System.out.println(h.get("Hi"));
-		SinglyLinkedList sll=new SinglyLinkedList();
+		// SinglyLinkedList sll=new SinglyLinkedList();
 		
 		// System.out.println(sll.size());
 		// System.out.println(sll.isEmpty());
@@ -20,15 +20,15 @@ public class Trial
 		// sll.reverse();
 		// System.out.println(sll.toString());
 
-		sll.addFirst(3);
-		sll.addFirst(2);
-		sll.addFirst(1);
-		sll.addLast(4);
-		sll.addLast(5);
-		sll.detectLoop();
-		sll.addLoop();
-		sll.detectLoop();
-		sll.removeLoop();
+		// sll.addFirst(3);
+		// sll.addFirst(2);
+		// sll.addFirst(1);
+		// sll.addLast(4);
+		// sll.addLast(5);
+		// sll.detectLoop();
+		// sll.addLoop();
+		// sll.detectLoop();
+		// sll.removeLoop();
 		// System.out.println(sll.size());
 		// System.out.println(sll.isEmpty());
 		// System.out.println(sll.first());
@@ -177,5 +177,26 @@ public class Trial
   //       System.out.println(m.toString()); 
 			// KMPAlgorithm.KMPSearch("AAAAABAAABA","AAAA");
 			// ZAlgorithm.ZSearch("AAAAABAAABA","AAAA");
+		BinarySearchTree root=new BinarySearchTree();
+		root.insert(4);
+		root.insert(3);
+		root.insert(1);
+		root.insert(2);
+		root.insert(9);
+		root.insert(6);
+		root.insert(5);
+		root.insert(7);
+		root.insert(8);
+		// System.out.println("Inorder:-");
+		// root.inOrder();
+		// System.out.println(root.height());
+		// root.levelOrderSpiral();
+		// root.mirror();
+		// root.inOrder();
+		// root.levelOrder();
+		// root.bottomView();
+		System.out.println(root.isValidBST());
+		root.mirror();
+		System.out.println(root.isValidBST());
 	}
 }
