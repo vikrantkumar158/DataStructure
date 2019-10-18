@@ -167,20 +167,22 @@ public class Trial
 		// System.out.println(BinarySearch.occurence(arr,6));
 		// System.out.println(BinarySearch.pairsWithSum(arr,10));
 		// System.out.println(BinarySearch.findMissing(arr));
-		Heap m = new MaxHeap(); 
-        m.insert(5); 
-        m.insert(3); 
-        m.insert(17); 
-        m.insert(10); 
-        m.insert(84); 
-        m.insert(19); 
-        m.insert(6); 
-        m.insert(22); 
-        m.insert(9); 
-        m.buildHeap(); 
+		// Heap m = new MaxHeap(); 
+  //       m.insert(5); 
+  //       m.insert(3); 
+  //       m.insert(17); 
+  //       m.insert(10); 
+  //       m.insert(84); 
+  //       m.insert(19); 
+  //       m.insert(6); 
+  //       m.insert(22); 
+  //       m.insert(9); 
+  //       m.buildHeap(); 
   
-        System.out.println(m.toString()); 
-        System.out.println("The Min val is " + m.remove());
-        System.out.println(m.toString()); 
+  //       System.out.println(m.toString()); 
+  //       System.out.println("The Min val is " + m.remove());
+  //       System.out.println(m.toString()); 
+			KMPAlgorithm.KMPSearch("AAAAABAAABA","AAAA");
+			ZAlgorithm.ZSearch("AAAAABAAABA","AAAA");
 	}
 }
