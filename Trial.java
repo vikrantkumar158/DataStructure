@@ -195,8 +195,10 @@ public class Trial
 		// root.inOrder();
 		// root.levelOrder();
 		// root.bottomView();
-		System.out.println(root.isValidBST());
-		root.mirror();
-		System.out.println(root.isValidBST());
+		// root.delete(4);
+		// root.inOrder();
+		// System.out.println(root.isPallindrome());
+		System.out.println(root.LCA(2,3));
+		System.out.println(root.diameter());
 	}
 }

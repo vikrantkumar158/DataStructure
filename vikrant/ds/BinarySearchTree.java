@@ -5,6 +5,10 @@ public class BinarySearchTree<E extends Comparable<E>>
     { 
         private E data; 
         private Node<E> left,right; 
+        public Node()
+        {
+
+        }
         public Node(E item) 
         { 
             data=item; 
@@ -25,6 +29,10 @@ public class BinarySearchTree<E extends Comparable<E>>
         public Node<E> getRight()
         {
             return right;
+        }
+        public void setData(E item)
+        {
+            data=item;
         }
         public E getData()
         {
@@ -319,4 +327,162 @@ public class BinarySearchTree<E extends Comparable<E>>
         }
         return true;
     }
+    private void setNull(Node<E> r,Node<E> n)
+    {
+        if(n!=null)
+        {
+            if(r==root&&root.getData()==n.getData())
+            {
+                root=null;
+            }
+            if(r.getLeft()!=null&&r.getLeft().getData()==n.getData())
+            {
+                r.setLeft(null);
+            }
+            else if(r.getRight()!=null&&r.getRight().getData()==n.getData())
+            {
+                r.setRight(null);
+            }
+            else if(r.getData().compareTo(n.getData())>0)
+                setNull(r.getLeft(),n);
+            else if(r.getData().compareTo(n.getData())<0)
+                setNull(r.getRight(),n);
+        }
+    }
+    private void deleteNode(Node<E> r)
+    {
+        if(r.getLeft()==null&&r.getRight()==null)
+        {
+            setNull(root,r);
+        }
+        if(r.getLeft()==null&&r.getRight()!=null)
+        {
+            Node<E> n=r;
+            r.setData(r.getRight().getData());
+            r.setLeft(r.getRight().getLeft());
+            r.setRight(r.getRight().getRight());
+        }
+        else if(root.getLeft()!=null&&root.getRight()==null)
+        {
+            Node<E> n=r;
+            r.setData(r.getLeft().getData());
+            r.setRight(r.getLeft().getRight()); 
+            r.setLeft(r.getLeft().getLeft()); 
+        }
+        else
+        {
+            Node<E> n=r.getLeft(),p=r;
+            while(n.getRight()!=null)
+            {
+                p=n;
+                n=n.getRight();
+            }
+            if(n.getLeft()!=null)
+            {
+                r.setData(n.getData());
+                n.setData(n.getLeft().getData());
+                n.setRight(n.getLeft().getRight());
+                n.setLeft(n.getLeft().getLeft());
+            }
+            else
+            {
+                r.setData(n.getData());
+                p.setLeft(null);
+            }    
+        }
+    }
+    private Node<E> findNode(Node<E> root,E key)
+    {
+        if(root!=null)
+        {
+            if(root.getData().compareTo(key)==0)
+                return root;
+            else if(root.getData().compareTo(key)>0)
+                return findNode(root.getLeft(),key);
+            else
+                return findNode(root.getRight(),key);
+        }
+        return null;
+    }
+    public void delete(E key)
+    {
+        if(root!=null)
+        {
+            Node<E> n=findNode(root,key);
+            if(n!=null)
+            {
+                deleteNode(n);
+            }
+        }
+    }
+    private boolean checkPallindrome(Node<E> n1,Node<E> n2)
+    {
+
+        if(n1==null&&n2==null)
+            return true;
+        else if(n1!=null&&n2==null)
+            return false;
+        else if(n1==null&&n2!=null)
+            return false;
+        else
+        {
+            if(n1.getData().compareTo(n2.getData())==0)
+                return true&&checkPallindrome(n1.getLeft(),n2.getRight())&&checkPallindrome(n2.getLeft(),n1.getRight());
+            else
+                return false;
+        }
+    }
+    public boolean isPallindrome()
+    {
+        if(root!=null)
+        {
+            return checkPallindrome(root.getLeft(),root.getRight());
+        }
+        return true;
+    }
+    private Node<E> lowestCommonAncestor(Node<E> n,E x,E y)
+    {
+        if(n==null)
+            return null;
+        if(n.getData().compareTo(x)>0&&n.getData().compareTo(y)>0)
+            return lowestCommonAncestor(n.getLeft(),x,y);
+        if(n.getData().compareTo(x)<0&&n.getData().compareTo(y)<0)
+            return lowestCommonAncestor(n.getRight(),x,y);
+        return n;
+    }
+    public E LCA(E x,E y)
+    {
+        if(root!=null)
+        {
+            Node<E> n=lowestCommonAncestor(root,x,y);
+            if(n!=null)
+                return n.getData();
+            return null;
+        }
+        return null;
+    }
+    private int max(int a,int b)
+    {
+        if(a>b)
+            return a;
+        return b;
+    }
+    private int getDiameter(Node<E> n)
+    {
+        if(n==null)
+            return 0;
+        int lh=getHeight(n.getLeft());
+        int rh=getHeight(n.getRight());
+        int ld=getDiameter(n.getLeft());
+        int rd=getDiameter(n.getRight());
+        return max(lh+rh+1,max(ld,rd));
+    }
+    public int diameter() 
+    { 
+        if(root!=null)
+        {
+            return getDiameter(root);
+        }
+        return 0;
+    }  
 }

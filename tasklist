@@ -14,17 +14,12 @@ Trees
 > Path in the Tree ( Highest cost , Print the paths)
 > -Vertical Order Traversal 
 > Binary Tree to Doubly Linked List
-> -Delete a Node in BST 
-> Palindromic tree 
-> -Lowest Common Ancestor
-> -Diameter of a Binary Tree 
 > -Construct a Tree from Inorder and Preorder, 
 > Construct a Tree from InOrder and PostOrder
 > Implement Tree using Array
 
 Suffix Arrays
 > Longest Repeated String - Overlapping
-> Longest Repeated String - Non - Overlapping
 > Longest Repeated String which occurs n times 
 > All Anagrams in Dictionary  
 > Longest Common Prefix
