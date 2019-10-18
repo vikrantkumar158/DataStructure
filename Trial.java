@@ -3,15 +3,15 @@ import vikrant.ds.Queue;
 import vikrant.ds.*;
 public class Trial
 {
-	// public static void main(String args[])
-	// {
+	public static void main(String args[])
+	{
 		// HashTable h=new HashTable();
 		// h.insert("Hello");
 		// h.insert("Hi");
 		// h.insert("are");
 		// h.insert("you");
 		// System.out.println(h.get("Hi"));
-		// SinglyLinkedList sll=new SinglyLinkedList();
+		SinglyLinkedList sll=new SinglyLinkedList();
 		
 		// System.out.println(sll.size());
 		// System.out.println(sll.isEmpty());
@@ -20,11 +20,15 @@ public class Trial
 		// sll.reverse();
 		// System.out.println(sll.toString());
 
-		// sll.addFirst(3);
-		// sll.addFirst(2);
-		// sll.addFirst(1);
-		// sll.addLast(4);
-
+		sll.addFirst(3);
+		sll.addFirst(2);
+		sll.addFirst(1);
+		sll.addLast(4);
+		sll.addLast(5);
+		sll.detectLoop();
+		sll.addLoop();
+		sll.detectLoop();
+		sll.removeLoop();
 		// System.out.println(sll.size());
 		// System.out.println(sll.isEmpty());
 		// System.out.println(sll.first());
@@ -63,9 +67,6 @@ public class Trial
 		// System.out.println(l.toString());
 		// System.out.println(l.pop());
 		// System.out.println(l.toString());
-	// }
-	/** Demonstrates sample usage of a stack. */
-    // public static void main(String[] args) {
     // Stack S = new LinkedStack();  // contents: ()
     // S.push(5);                              // contents: (5)
     // S.push(3);                              // contents: (5, 3)
@@ -89,8 +90,6 @@ public class Trial
     // S.push(6);                              // contents: (7, 9, 6)
     // S.push(8);                              // contents: (7, 9, 6, 8)
     // System.out.println(S.pop());            // contents: (7, 9, 6)  outputs 8
-    // }
-    // public static void main(String[] args) {
 	   //  StackMin S = new StackMin();  // contents: ()
 	   //  S.push(5);                              // contents: (5)
 	   //  S.push(3);                              // contents: (5, 3)
@@ -115,9 +114,6 @@ public class Trial
 	   //  S.push(8);                              // contents: (7, 9, 6, 8)
 	   //  System.out.println(S.pop());            // contents: (7, 9, 6)  outputs 8
 	   //  System.out.println(S.toString());
-    // }
- //    public static void main(String args[])
-	// {
 	// 	CircularLinkedList sll=new CircularLinkedList();
 		
 	// 	System.out.println(sll.size());
@@ -136,9 +132,6 @@ public class Trial
 	// 	System.out.println(sll.first());
 	// 	System.out.println(sll.last());
 	// 	System.out.println(sll.toString());
-	// }
-	public static void main(String args[])
-	{
 		// int i,arr[]=new int[]{10,9,8,7,6,5,4,3,2,1};
 		// Sorting.HeapSort(arr);
 		// for(i=0;i<arr.length;++i)
@@ -182,7 +175,7 @@ public class Trial
   //       System.out.println(m.toString()); 
   //       System.out.println("The Min val is " + m.remove());
   //       System.out.println(m.toString()); 
-			KMPAlgorithm.KMPSearch("AAAAABAAABA","AAAA");
-			ZAlgorithm.ZSearch("AAAAABAAABA","AAAA");
+			// KMPAlgorithm.KMPSearch("AAAAABAAABA","AAAA");
+			// ZAlgorithm.ZSearch("AAAAABAAABA","AAAA");
 	}
 }

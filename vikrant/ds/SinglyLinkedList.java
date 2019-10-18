@@ -40,6 +40,68 @@ public class SinglyLinkedList<E>
             return true;
         return false;
     }
+    public void addLoop()
+    {
+        if(!isEmpty()&&size>=5)
+        {
+            tail.setNext(head.getNext().getNext());
+        }  
+        else
+            System.out.println("In Order to add loop add 5 or more elements"); 
+    }
+    public void detectLoop()
+    {
+        int flag=0;
+        Node<E> slow=head,fast=head;
+        while(slow!=null&&fast!=null&&fast.getNext()!=null)
+        {
+            slow=slow.getNext();
+            fast=fast.getNext().getNext();
+            if(slow==fast)
+            {
+                flag=1;
+                System.out.println("Loop found");
+                break;
+            }
+        }
+        if(flag==0)
+            System.out.println("Loop not found");
+    }
+    private void remove(Node<E> n1,Node<E> n2)
+    {
+        Node<E> temp=n1;
+        int i,k=0;
+        do
+        {
+            temp=temp.getNext();
+            ++k;
+        }while(temp.getNext()!=n1);
+        temp=n2;
+        for(i=0;i<size-k;++i)
+        {
+            temp=temp.getNext();
+        }
+        n1=temp.getNext();
+        while(n1.getNext()!=temp)
+            n1=n1.getNext();
+        n1.setNext(null);
+        System.out.println("Loop removed");
+    }
+    public void removeLoop()
+    {
+        int flag=0;
+        Node<E> slow=head,fast=head;
+        while(slow!=null&&fast!=null&&fast.getNext()!=null)
+        {
+            slow=slow.getNext();
+            fast=fast.getNext().getNext();
+            if(slow==fast)
+            {
+                remove(slow,head);
+                break;
+            }
+        }
+    }
     public E first()
     {
         if(head!=null)

@@ -1,7 +1,5 @@
 Linked List  	 
 > Add first & last , second & second last ...... in O(n) - ( Recursive and Non recursive)
-> Detect Loop
-> Remove Loop 
 > Merging Point of Linked Lists ( slow and fast, hashing)
 
 Priority Queues and Heaps	
