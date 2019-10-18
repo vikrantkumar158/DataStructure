@@ -161,11 +161,26 @@ public class Trial
 		// System.out.println(q.peek());
 		// System.out.println(q.dequeue());
 		// System.out.println(q.dequeue());
-		int arr[]=new int[]{1,2,3,5,6};
+		// int arr[]=new int[]{1,2,3,5,6};
 		// System.out.println(BinarySearch.IterativeSearch(arr,6));
 		// System.out.println(BinarySearch.RecursiveSearch(arr,6,0,arr.length-1));
 		// System.out.println(BinarySearch.occurence(arr,6));
 		// System.out.println(BinarySearch.pairsWithSum(arr,10));
-		System.out.println(BinarySearch.findMissing(arr));
+		// System.out.println(BinarySearch.findMissing(arr));
+		Heap m = new MaxHeap(); 
+        m.insert(5); 
+        m.insert(3); 
+        m.insert(17); 
+        m.insert(10); 
+        m.insert(84); 
+        m.insert(19); 
+        m.insert(6); 
+        m.insert(22); 
+        m.insert(9); 
+        m.buildHeap(); 
+  
+        System.out.println(m.toString()); 
+        System.out.println("The Min val is " + m.remove());
+        System.out.println(m.toString()); 
 	}
 }
