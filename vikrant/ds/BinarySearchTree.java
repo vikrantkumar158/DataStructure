@@ -40,7 +40,6 @@ public class BinarySearchTree<E extends Comparable<E>>
         }
     }
     private Node<E> root=null; 
-    private int size=0;
 
     public BinarySearchTree() 
     {  
@@ -58,7 +57,6 @@ public class BinarySearchTree<E extends Comparable<E>>
         { 
             Node<E> n=new Node(data);
             root=n;
-            ++size;  
         }
         else if(root.getData().compareTo(data)>0)
         {
@@ -75,8 +73,8 @@ public class BinarySearchTree<E extends Comparable<E>>
         if(root!=null)
         {
             System.out.println(root.getData());
-            inOrderPrint(root.getLeft());
-            inOrderPrint(root.getRight());
+            preOrderPrint(root.getLeft());
+            preOrderPrint(root.getRight());
         }
     }
     public void preOrder()
@@ -100,9 +98,9 @@ public class BinarySearchTree<E extends Comparable<E>>
     {
         if(root!=null)
         {
+            postOrderPrint(root.getLeft());
+            postOrderPrint(root.getRight());
             System.out.println(root.getData());
-            inOrderPrint(root.getLeft());
-            inOrderPrint(root.getRight());
         }
     }
     public void postOrder()
@@ -111,15 +109,54 @@ public class BinarySearchTree<E extends Comparable<E>>
     }
     public void iterativePreOrder()
     {
-
+        Stack<Node<E>> s=new LinkedStack();
+        Node<E> n;
+        s.push(root);
+        while(!s.isEmpty())
+        {
+            n=s.pop();
+            if(n.getRight()!=null)
+                s.push(n.getRight());
+            if(n.getLeft()!=null)
+                s.push(n.getLeft());
+            System.out.println(n.getData());
+        }   
     }
     public void iterativeInOrder()
     {
-
+        Stack<Node<E>> s=new LinkedStack();
+        Node<E> n=root;
+        while(!s.isEmpty()||n!=null)
+        {
+            while(n!=null)
+            {
+                s.push(n);
+                n=n.getLeft();
+            }
+            n=s.pop();
+            System.out.println(n.getData());
+            n=n.getRight();
+        }
     }
     public void iterativePostOrder()
     {
-        
+        Stack<Node<E>> s1=new LinkedStack(),s2=new LinkedStack();
+        Node<E> n;
+        s1.push(root);
+        while(!s1.isEmpty())
+        {
+            n=s1.pop();
+            s2.push(n);
+            if(n.getLeft()!=null)
+                s1.push(n.getLeft());
+            if(n.getRight()!=null)
+                s1.push(n.getRight());
+        } 
+        while(!s2.isEmpty())
+        {
+            n=s2.pop();
+            System.out.println(n.getData());
+        }  
     }
     private int getHeight(Node<E> root)
     {
@@ -142,7 +179,6 @@ public class BinarySearchTree<E extends Comparable<E>>
     }
     public void delete()
     {
-        size=0;
         root=null;
     }
     private void loadLevelOrder(Node<E> root)

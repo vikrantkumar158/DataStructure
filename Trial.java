@@ -67,31 +67,31 @@ public class Trial
 		// System.out.println(l.toString());
 		// System.out.println(l.pop());
 		// System.out.println(l.toString());
-    // Stack S = new LinkedStack();  // contents: ()
-    // S.push(5);                              // contents: (5)
-    // S.push(3);                              // contents: (5, 3)
-    // System.out.println(S.size());           // contents: (5, 3)     outputs 2
-    // System.out.println(S.pop());            // contents: (5)        outputs 3
-    // System.out.println(S.isEmpty());        // contents: (5)        outputs false
-    // System.out.println(S.pop());            // contents: ()         outputs 5
-    // System.out.println(S.isEmpty());        // contents: ()         outputs true
-    // // System.out.println(S.minimum());            // contents: ()         outputs null
-    // System.out.println(S.pop());
-    // System.out.println(S.toString());            // contents: ()         outputs null
-    // S.push(7);                              // contents: (7)
-    // S.push(9);                              // contents: (7, 9)
-    // System.out.println(S.toString());  
-    // System.out.println(S.top());            // contents: (7, 9)     outputs 9
-    // // System.out.println(S.minimum());            // contents: ()         outputs null
-    // S.push(4);                              // contents: (7, 9, 4)
-    // System.out.println(S.size());           // contents: (7, 9, 4)  outputs 3
-    // System.out.println(S.pop());            // contents: (7, 9)     outputs 4
-    // // System.out.println(S.minimum());            // contents: ()         outputs null
-    // S.push(6);                              // contents: (7, 9, 6)
-    // S.push(8);                              // contents: (7, 9, 6, 8)
-    // System.out.println(S.pop());            // contents: (7, 9, 6)  outputs 8
-	   //  StackMin S = new StackMin();  // contents: ()
-	   //  S.push(5);                              // contents: (5)
+	    // Stack S = new LinkedStack();  // contents: ()
+	    // S.push(5);                              // contents: (5)
+	    // S.push(3);                              // contents: (5, 3)
+	    // System.out.println(S.size());           // contents: (5, 3)     outputs 2
+	    // System.out.println(S.pop());            // contents: (5)        outputs 3
+	    // System.out.println(S.isEmpty());        // contents: (5)        outputs false
+	    // System.out.println(S.pop());            // contents: ()         outputs 5
+	    // System.out.println(S.isEmpty());        // contents: ()         outputs true
+	    // // System.out.println(S.minimum());            // contents: ()         outputs null
+	    // System.out.println(S.pop());
+	    // System.out.println(S.toString());            // contents: ()         outputs null
+	    // S.push(7);                              // contents: (7)
+	    // S.push(9);                              // contents: (7, 9)
+	    // System.out.println(S.toString());  
+	    // System.out.println(S.top());            // contents: (7, 9)     outputs 9
+	    // // System.out.println(S.minimum());            // contents: ()         outputs null
+	    // S.push(4);                              // contents: (7, 9, 4)
+	    // System.out.println(S.size());           // contents: (7, 9, 4)  outputs 3
+	    // System.out.println(S.pop());            // contents: (7, 9)     outputs 4
+	    // // System.out.println(S.minimum());            // contents: ()         outputs null
+	    // S.push(6);                              // contents: (7, 9, 6)
+	    // S.push(8);                              // contents: (7, 9, 6, 8)
+	    // System.out.println(S.pop());            // contents: (7, 9, 6)  outputs 8
+	   	//  StackMin S = new StackMin();  // contents: ()
+	   	//  S.push(5);                              // contents: (5)
 	   //  S.push(3);                              // contents: (5, 3)
 	   //  System.out.println(S.size());           // contents: (5, 3)     outputs 2
 	   //  System.out.println(S.pop());            // contents: (5)        outputs 3
@@ -198,7 +198,9 @@ public class Trial
 		// root.delete(4);
 		// root.inOrder();
 		// System.out.println(root.isPallindrome());
-		System.out.println(root.LCA(2,3));
-		System.out.println(root.diameter());
+		// System.out.println(root.LCA(2,3));
+		// System.out.println(root.diameter());
+		// root.iterativePostOrder();
+		// root.postOrder();
 	}
 }
