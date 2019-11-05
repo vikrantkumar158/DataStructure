@@ -520,5 +520,30 @@ public class BinarySearchTree<E extends Comparable<E>>
             return getDiameter(root);
         }
         return 0;
-    }  
+    }
+    public int maxPathSum(Node<E> root)
+    {
+        if(root!=null)
+        {
+            int leftS=maxPathSum(root.left);
+            int rightS=maxPathSum(root.right);
+            int sumCurrent;
+            if(leftS<0&&rightS<0){
+                sumCurrent=root.data;
+            }
+            else
+            {
+                sumCurrent=Math.max(leftS+rightS+root.data,Math.max(leftS, rightS));
+            }
+            if(maxSoFar<sumCurrent){
+                maxSoFar=sumCurrent;
+            }
+            return Math.max(leftS,rightS)+root.data;
+        }
+        else return 0;
+    }
+    public int pathInTree()
+    {
+        return maxPathSum(root);
+    }
 }
